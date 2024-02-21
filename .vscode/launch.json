@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Exercise4Application<StudentListOneToMany>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "exercise_4.exercise_4.Exercise4Application",
+      "projectName": "StudentListOneToMany",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
