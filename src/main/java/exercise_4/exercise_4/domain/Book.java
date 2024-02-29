@@ -1,5 +1,7 @@
 package exercise_4.exercise_4.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +19,7 @@ public class Book {
     private String author;
     private int year;
     private String isbn;
-
+    @JsonIgnore
     @ManyToOne
 	@JoinColumn(name = "categoryId")
 	private Category category;
