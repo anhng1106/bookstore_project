@@ -1,5 +1,7 @@
 package exercise_4.exercise_4.domain;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -60,5 +62,10 @@ public class AppUser {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+    public void saveAll(List<AppUser> asList) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'saveAll'");
+    }
 
 }

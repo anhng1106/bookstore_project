@@ -1,5 +1,7 @@
 package exercise_4.exercise_4;
 
+import java.util.Arrays;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,6 +10,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import exercise_4.exercise_4.domain.AppUser;
+import exercise_4.exercise_4.domain.AppUserRepository;
 import exercise_4.exercise_4.domain.Book;
 import exercise_4.exercise_4.domain.BookRepository;
 import exercise_4.exercise_4.domain.Category;
@@ -23,7 +27,7 @@ public class Exercise4Application {
 
 
 @Bean
-	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository crepository) {
+	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository crepository, AppUserRepository urepository) {
 		return (args) -> {
 			log.info("save a couple of books");
 			
@@ -48,7 +52,15 @@ public class Exercise4Application {
 				log.info(book.toString());
 			}
 
+			// Create users with BCrypt encoded password (user/user, admin/admin)
+			AppUser user1 = new AppUser("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
+			AppUser user2 = new AppUser("admin", "$2a$08$bCCcGjB03eulCWt3CY0AZew2rVzXFyouUolL5dkL/pBgFkUH9O4J2", "ADMIN");
+			AppUser user3 = new AppUser("nayoung", "$2a$10$gShsUlF8IaiM3VzADL5ImucGil86ffBXdv2MS3fT4n76ihy5yz3A.", "ADMIN");
+			AppUser user4 = new AppUser("antran", "$2a$10$utIT63J.i.aLLakgeZ5nOOIKsBXjJ5O8mOLixLzIUsXTCzI0qFIAC", "USER");
+			AppUser user5 = new AppUser("nhoi", "$2a$10$/LIm4C5WDyXcGTl/fcwQBuu.PoJiChs/tGoX47G3us/9BPgK4CjXK", "ADMIN");
+			urepository.saveAll(Arrays.asList(user1, user2, user3, user4, user5));
+
+		};
+
 		};
 	}
-
-}
