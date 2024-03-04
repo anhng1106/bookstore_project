@@ -13,12 +13,12 @@ import jakarta.persistence.ManyToOne;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private Long bookId;
     private String title;
     private String author;
     private int year;
     private String isbn;
+    
     @JsonIgnore
     @ManyToOne
 	@JoinColumn(name = "categoryId")

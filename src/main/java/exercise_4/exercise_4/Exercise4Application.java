@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import exercise_4.exercise_4.domain.AppUserRepository;
 import exercise_4.exercise_4.domain.Book;
 import exercise_4.exercise_4.domain.BookRepository;
 import exercise_4.exercise_4.domain.Category;
@@ -24,7 +23,7 @@ public class Exercise4Application {
 
 
 @Bean
-	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository crepository, AppUserRepository urepository) {
+	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository crepository) {
 		return (args) -> {
 			log.info("save a couple of books");
 			

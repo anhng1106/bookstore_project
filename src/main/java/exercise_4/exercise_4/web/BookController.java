@@ -60,6 +60,11 @@ public class BookController {
     }
 
     //Delete book
+    // Demo here how to use @PreAuthorize annotation
+    //@PreAuthorize("hasAuthority('ADMIN')") 
+    // a) try to delete book (with USER ROLE)
+    // b) @PreAuthorize delete only for ADMIN ROLE
+    // c) try to delete book again  (with USER ROLE)
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteBook(@PathVariable("id") Long bookId, Model model) {
         bookRepository.deleteById(bookId);
