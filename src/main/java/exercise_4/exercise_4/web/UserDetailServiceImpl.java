@@ -1,4 +1,4 @@
-package exercise_4.exercise_4.service;
+package exercise_4.exercise_4.web;
 
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
