@@ -66,20 +66,12 @@ public class Book {
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
-    // public double getPrice() {
-    //     return this.price;
-    // }
-    // public void setPrice(double price) {
-    //     this.price = price;
-    // }
     public String getAuthor() {
         return this.author;
     }
-
     public Category getCategory() {
 		return category;
 	}
-
 	public void setCategory(Category category) {
 		this.category = category;
 	}

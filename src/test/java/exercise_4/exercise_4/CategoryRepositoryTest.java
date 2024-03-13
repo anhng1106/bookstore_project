@@ -19,8 +19,7 @@ import exercise_4.exercise_4.domain.CategoryRepository;
 //@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = Exercise4Application.class)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class BookRepositoryTest {
-
+public class CategoryRepositoryTest {
     @Autowired
     private BookRepository brepository;
 
@@ -28,27 +27,28 @@ public class BookRepositoryTest {
     private CategoryRepository crepository;
 
     @Test
-    public void findByAuthorShouldReturnBook() {
-        List<Book> books = brepository.findByAuthor("George Orwell");
+    public void findByNameShouldReturnCategory() {
+        List<Category> categories = crepository.findByName("Fiction");
         
-        assertThat(books).hasSize(2);
-        assertThat(books.get(0).getAuthor()).isEqualTo("George Orwell");
+        assertThat(categories).hasSize(1);
+        assertThat(categories.get(0).getName()).isEqualTo("Fiction");
     }
     
     @Test
-    public void createNewBook() {
+    public void createNewCategory() {
     	Category category = new Category("Kids");
     	crepository.save(category);
-    	Book book = new Book("C.S.Lewis", "The Lion, the Witch and the Wardrobe", "B001KRMT5G", 1950, category);
-    	brepository.save(book);
-    	assertThat(book.getId()).isNotNull();
+
+    	assertThat(category.getId()).isNotNull();
     }    
+
     @Test
-    public void deleteNewBook() {
-        List<Book> books = brepository.findByAuthor("John Green");
-        Book book = books.get(0);
-		brepository.delete(book);
-		List<Book> newBooks = brepository.findByAuthor("John Green");
-		assertThat(newBooks).hasSize(0);
+    public void deleteNewCategory() {
+        List<Category> categories = crepository.findByName("Non-Fiction");
+        Category category = categories.get(0);
+		crepository.delete(category);
+		List<Category> newCategories = crepository.findByName("Non-Fiction");
+		assertThat(newCategories).hasSize(0);
      }
 }
+
