@@ -1,0 +1,10 @@
+exercise_4/exercise_4/web/BookController.class
+exercise_4/exercise_4/domain/Category.class
+exercise_4/exercise_4/domain/AppUserRepository.class
+exercise_4/exercise_4/Exercise4Application.class
+exercise_4/exercise_4/web/UserDetailServiceImpl.class
+exercise_4/exercise_4/domain/BookRepository.class
+exercise_4/exercise_4/domain/CategoryRepository.class
+exercise_4/exercise_4/WebSecurityConfig.class
+exercise_4/exercise_4/domain/Book.class
+exercise_4/exercise_4/domain/AppUser.class
