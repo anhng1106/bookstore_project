@@ -5,6 +5,8 @@
 /Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/domain/Book.java
 /Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/domain/CategoryRepository.java
 /Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/WebSecurityConfig.java
+/Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/domain/SignupForm.java
+/Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/web/UserController.java
 /Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/domain/Category.java
 /Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/web/UserDetailServiceImpl.java
 /Users/nayoungg/Nayoungie/Programming_examples/bookstore_project/src/main/java/exercise_4/exercise_4/domain/BookRepository.java
